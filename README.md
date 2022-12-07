@@ -3,9 +3,9 @@
 
 #INSTALLATION
 
-1 npm install algoliasearch react-instantsearch-hooks
+1 npm install algoliasearch 
                
-yarn add algoliasearch react-instantsearch-hooks
+yarn add algoliasearch 
 
 
 2.yarn add react-instantsearch-native
