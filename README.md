@@ -51,6 +51,7 @@ In App.tsx we call components under <InstantSearch>
 
 
     
+FOR APPLY BRAND FILTER<img width="1500" alt="Screenshot 2022-12-07 at 3 22 46 PM" src="https://user-images.githubusercontent.com/103095958/206160879-465f6b13-f289-4ee4-b34b-304599bed774.png">
 
 
 
