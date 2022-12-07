@@ -2,6 +2,7 @@
 
 
 
+
 #INSTALLATION
 
 1 npm install algoliasearch react-instantsearch-hooks
@@ -46,11 +47,18 @@ In src folder we should create 5 files
 In App.tsx we call components under <InstantSearch>
     we need the 
     API ID:_____________
-
     API KEY:____________
 
 
     
+
+
+
+    
+
+https://user-images.githubusercontent.com/103095958/206159995-3dec0687-5b6b-44d8-a96b-d493380c354c.mp4
+
+
 
  
 
