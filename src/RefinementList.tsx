@@ -13,6 +13,7 @@ const RefinementList = ({items, refine}: any) => {
           const labelStyle = {
             fontSize: 18,
             fontWeight: item.isRefined ? '900' : '400',
+            color: 'black',
           };
           console.log('refine', item);
 
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 20,
     fontWeight: '800',
+    color: 'black',
   },
   list: {
     marginTop: 20,

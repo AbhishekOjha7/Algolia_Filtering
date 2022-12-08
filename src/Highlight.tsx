@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {connectHighlight} from 'react-instantsearch-native';
 
 const Highlight = ({attribute, hit, highlight}: any) => {
@@ -11,11 +11,14 @@ const Highlight = ({attribute, hit, highlight}: any) => {
   return (
     <Text>
       {highlights.map(({value, isHighlighted}: any, index: any) => {
-        const style = {
-          backgroundColor: isHighlighted ? 'yellow' : 'transparent',
-        };
         return (
-          <Text key={index} style={style}>
+          <Text
+            key={index}
+            style={{
+              backgroundColor: isHighlighted ? 'yellow' : 'transparent',
+              fontSize: 18,
+              color: 'black',
+            }}>
             {value}
           </Text>
         );

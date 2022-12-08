@@ -29,14 +29,15 @@ const styles = StyleSheet.create({
   },
   item: {
     flexDirection: 'row',
-    padding: 8,
+    padding: 5,
+    width: 340,
   },
   titleText: {
     fontWeight: 'bold',
   },
   renderImg: {
-    height: 40,
-    width: 40,
+    height: 50,
+    width: 50,
     resizeMode: 'contain',
   },
 });

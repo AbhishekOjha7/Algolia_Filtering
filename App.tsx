@@ -42,7 +42,7 @@ const App = () => {
             onSearchStateChange={onSearchStateChange}
           />
           <SearchBox />
-          <Button title="Filters" color="#252b33" onPress={toggleModal} />
+          <Button title="Filters" color="black" onPress={toggleModal} />
           <InfiniteHits />
         </InstantSearch>
       </View>

@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
   closeButtonText: {
     fontSize: 18,
     fontWeight: '800',
+    color: 'black',
   },
   container: {
     flex: 1,
