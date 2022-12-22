@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -20,10 +20,28 @@ const Filters = ({
 }: any) => {
   console.log('SearchState', searchState);
   const data = ['manufacturer', 'categories', 'salePrice_range'];
-
+  const attribute = ['manufacturer', 'categories', 'salePrice_range'];
   const ScrollRef: any = useRef();
-  const [value, setValue] = useState([]);
+  // const [RefineArray, setRefineArray] = useState([]);
+  // const [value, setValue] = useState([]);
+  // const RefineList = () => {
+  //   switch (attribute) {
+  //     case 'manufacturer':
+  //       return <RefinementList attribute={'manufacturer'} />;
+  //       break;
+  //     case 'categories':
+  //       return <RefinementList attribute={'categories'} />;
 
+  //       break;
+  //     case 'salePrice_range':
+  //       return <RefinementList attribute={'salePrice_range'} />;
+
+  //       break;
+
+  //     default:
+  //       break;
+  //   }
+  // };
   return (
     <Modal animationType="slide" visible={isModalOpen}>
       <SafeAreaView style={styles.container}>
@@ -42,6 +60,9 @@ const Filters = ({
                   ScrollRef.current?.scrollToIndex({
                     index: 0,
                   });
+                  // setAttribute('manufacturer');
+                  console.log('hello', ScrollRef.current);
+                  // setValue(value)
                 }}>
                 {data[0]}
               </Text>
@@ -51,6 +72,9 @@ const Filters = ({
                   ScrollRef.current?.scrollToIndex({
                     index: 1,
                   });
+                  // setAttribute(data[1]);
+                  // console.log('Catehhh', value);
+                  // setValue(value)
                 }}>
                 {data[1]}
               </Text>
@@ -60,6 +84,8 @@ const Filters = ({
                   ScrollRef.current?.scrollToIndex({
                     index: 2,
                   });
+                  // setAttribute(data[2]);
+                  // setValue(value)
                 }}>
                 {data[2]}
               </Text>
@@ -75,14 +101,26 @@ const Filters = ({
                 indexName="Appinventiv_DATA"
                 searchState={searchState}
                 onSearchStateChange={onSearchStateChange}>
-                <FlatList
-                  data={data}
-                  ref={ScrollRef}
-                  renderItem={({item}) => {
-                    return <RefinementList attribute={item} />;
-                  }}
-                />
+                {/* <Configure
+                      sumOrFiltersScores={true}
+                       /> */}
+                {/* {RefineList()} */}
+                {/* <RefinementList attribute={attribute} val={value} callBack={(x)=>{
+                        console.log('SetValue',x)
+                        setValue(x)}}/> */}
+
+                {/* <RefinementList attribute={attribute} /> */}
+                {/* <RefinementList attribute="manufacturer" />
+                      <RefinementList attribute="categories" />
+                      <RefinementList attribute="salePrice_range" /> */}
               </InstantSearch>
+              <FlatList
+                data={attribute}
+                ref={ScrollRef}
+                renderItem={({item}) => {
+                  return <RefinementList attribute={item} />;
+                }}
+              />
             </View>
           </View>
         </ScrollView>

@@ -7,8 +7,8 @@ import InfiniteHits from './src/InfiniteHits';
 import Filters from './src/Filter';
 
 const searchClient = algoliasearch(
-  'W2OFSLZD6V',
-  '6d2dc7b162f500ef42a18746f3170376',
+  'SS7JYYYRGE',
+  '3a5ba24ad1e9aaf1e93ebac5b725090a',
 );
 
 const VirtualRefinementList = connectRefinementList(() => null);
@@ -20,6 +20,7 @@ const App = () => {
   };
 
   const onSearchStateChange = (searchState: any) => {
+    console.log('SearchState',searchState)
     setSearchState(searchState);
   };
 
@@ -30,10 +31,12 @@ const App = () => {
       <View style={styles.container}>
         <InstantSearch
           searchClient={searchClient}
-          indexName="Appinventiv_Algolia"
+          indexName="Appinventiv_DATA"
           searchState={searchState}
           onSearchStateChange={onSearchStateChange}>
-          <VirtualRefinementList attribute="brand" />
+          <VirtualRefinementList attribute="manufacturer" />
+          <VirtualRefinementList attribute="categories" />
+          <VirtualRefinementList attribute="salePrice_range" />
           <Filters
             isModalOpen={isModalOpen}
             searchClient={searchClient}
